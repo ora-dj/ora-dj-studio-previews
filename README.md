@@ -6,9 +6,18 @@ The production website and stable/beta updaters do not use this repository.
 
 ## Availability
 
-No Mac preview is available yet. An empty Releases page is expected until a
-signed candidate has passed preparation and is published by the maintained
-preview workflow. Repository setup alone does not produce an installer.
+[Download the Mac 0.51.0 mini installer (1.7 MB)](https://github.com/ora-dj/ora-dj-studio-previews/releases/download/v0.51.0-mac-mini-preview-cea5840df092bb86be54-e504fcb1-c652-4c69-bae8-4ac65c87b3b2/Ora-DJ-0.51.0-mac-mini-preview-universal.dmg).
+The [matching preview release](https://github.com/ora-dj/ora-dj-studio-previews/releases/tag/v0.51.0-mac-mini-preview-cea5840df092bb86be54-e504fcb1-c652-4c69-bae8-4ac65c87b3b2) also contains the full DMG for manual/offline installation.
+
+Built from merged source `541486d5a8131449bc1af0d698dc4786e1fccb25`. The maintained
+workflow passed signing/notarization, packaged startup/relaunch/upgrade checks,
+packaged acquisition tests against a local collector, and public download size/hash
+verification. This is a preview for the two-Mac smoke test, not production release
+approval. Intel hardware and password-entry UI remain unqualified.
+
+Preview acquisition reporting uses fixture/localhost so test events do not enter
+the production analytics funnel. The app retains its real identity and Applications
+destination; use the isolation guidance below to protect an existing installation.
 
 ## Distribution rules
 
@@ -28,7 +37,7 @@ Use the direct link for one published preview; do not mix artifacts from differe
 preview tags. Record the version, macOS version, chip and result for each test.
 
 1. Download the mini in a browser and open it normally, preserving macOS quarantine.
-2. Confirm it immediately downloads the app from GitHub and displays progress.
+2. Open **Ora DJ Installer** inside the DMG. Confirm it immediately downloads the app from GitHub and displays progress.
 3. Confirm installation completes and the real Ora window opens automatically.
 4. Quit and reopen Ora. Confirm that library/settings remain intact.
 5. On a disposable installation, retry with Ora running, cancel a download, and
